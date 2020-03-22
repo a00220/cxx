@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bed140ca-4394-4e4c-992a-d7f1464e744d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cx/converter/OrderMaster2OrderDTOConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cx/controller/BuyerOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cx/controller/BuyerOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cx/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cx/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cx/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cx/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cx/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cx/service/impl/ProductServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cx/utils/EnumUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cx/utils/EnumUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/api/seller.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/api/seller.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pay.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/pay.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order/list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order/list.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pay/create.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pay/create.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cx/service/impl/OrderServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cx/service/impl/OrderServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,12 +128,24 @@
       <workItem from="1584757928692" duration="1596000" />
       <workItem from="1584760810603" duration="10158000" />
       <workItem from="1584778222079" duration="4216000" />
-      <workItem from="1584844332129" duration="235000" />
+      <workItem from="1584844332129" duration="736000" />
     </task>
+    <task id="LOCAL-00001" summary="1.1备份">
+      <created>1584844890448</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584844890458</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1.1备份" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.1备份" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="168" width="1093" height="703" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584279147432">
@@ -168,6 +168,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="544" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584509727125" />
+    <state x="376" y="46" key="CommitChangelistDialog2" timestamp="1584844888228">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="376" y="46" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584844888228" />
     <state width="1867" height="239" key="GridCell.Tab.0.bottom" timestamp="1584682698323">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
