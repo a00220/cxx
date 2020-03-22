@@ -13,6 +13,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 
@@ -43,11 +44,22 @@ public class ProductServiceImpl implements ProductService {
         return productInfoDao.save(productInfo);
     }
 
-    //    @Override
-//    public void increaseStock(List<CartDTO> cartDTOList) {
-//
-//    }
-//
+    @Override
+    @Transactional
+    public void increaseStock(List<CartDTO> cartDTOList) {
+        for (CartDTO cartDTO : cartDTOList) {
+            ProductInfo productInfo = productInfoDao.findById(cartDTO.getProductId()).orElse(null);
+            if (productInfo == null) {
+                throw new SellException(RResultEnum.PRODUCT_NOT_EXIST);
+            }
+            Integer result = productInfo.getProductStock() + cartDTO.getProductQuantity();
+            productInfo.setProductStock(result);
+
+            productInfoDao.save(productInfo);
+        }
+    }
+
+
     @Override
     public void decreaseStock(List<CartDTO> cartDTOList) {
         for (CartDTO cartDTO : cartDTOList) {
@@ -64,13 +76,38 @@ public class ProductServiceImpl implements ProductService {
         }
     }
 
+
     @Override
     public ProductInfo onSale(String productId) {
-        return null;
+        ProductInfo productInfo = productInfoDao.findById(productId).orElse(null);
+        if (productInfo == null) {
+            throw new SellException(RResultEnum.PRODUCT_NOT_EXIST);
+        }
+        if (productInfo.getProductStatusEnum() == ProductStatusEnum.UP) {
+            throw new SellException(RResultEnum.PRODUCT_STATUS_ERROR);
+        }
+
+        //更新
+        productInfo.setProductStatus(ProductStatusEnum.UP.getCode());
+        return productInfoDao.save(productInfo);
     }
 
     @Override
     public ProductInfo offSale(String productId) {
-        return null;
+        ProductInfo productInfo = productInfoDao.findById(productId).orElse(null);
+        if (productInfo == null) {
+            throw new SellException(RResultEnum.PRODUCT_NOT_EXIST);
+        }
+        if (productInfo.getProductStatusEnum() == ProductStatusEnum.DOWN) {
+            throw new SellException(RResultEnum.PRODUCT_STATUS_ERROR);
+        }
+        //更新
+        productInfo.setProductStatus(ProductStatusEnum.DOWN.getCode());
+        return productInfoDao.save(productInfo);
     }
+
+
+
+
+
 }

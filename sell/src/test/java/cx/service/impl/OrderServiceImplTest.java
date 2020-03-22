@@ -3,6 +3,7 @@ package cx.service.impl;
 import cx.dto.OrderDTO;
 import cx.entity.OrderDetail;
 import cx.service.OrderService;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ import static org.junit.Assert.*;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-
+@Slf4j
 public class OrderServiceImplTest {
 
 
@@ -35,13 +36,19 @@ public class OrderServiceImplTest {
 
         List<OrderDetail> orderDetailList = new ArrayList<>();
         OrderDetail orderDetail = new OrderDetail();
-        orderDetail.setProductId("");
+        orderDetail.setProductId("2");
         orderDetail.setProductQuantity(2);
         orderDetailList.add(orderDetail);
 
         OrderDetail orderDetail2 = new OrderDetail();
-        orderDetail2.setProductId("");
+        orderDetail2.setProductId("3");
         orderDetail2.setProductQuantity(2);
-        orderDetailList.add(orderDetail);
+        orderDetailList.add(orderDetail2);
+
+        orderDTO.setOrderDetailList(orderDetailList);
+        OrderDTO result = orderService.create(orderDTO);
+        log.info("result={}",result);
+
+
     }
 }
